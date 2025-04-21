@@ -1,14 +1,16 @@
 import { RefObject } from "react";
 import { useGSAP, gsap } from "./animation";
 
-const useAbout = ({ container }: { container: RefObject<null> }) => {
+const useContact = ({ container }: { container: RefObject<null> }) => {
   useGSAP(
     () => {
-      gsap.from(".about-image", {
-        transform: "scale(2) translateX(31%) translateY(10%)",
+      gsap.from(".input-item", {
+        y: 100,
+        opacity: 0,
+        stagger: 0.2,
         scrollTrigger: {
           trigger: container.current,
-          start: "top 60%",
+          start: "top 70%",
         },
       });
     },
@@ -16,4 +18,4 @@ const useAbout = ({ container }: { container: RefObject<null> }) => {
   );
 };
 
-export default useAbout;
+export default useContact;

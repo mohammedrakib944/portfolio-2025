@@ -9,7 +9,7 @@ import useAbout from "./hooks/useAbout";
 const AboutMe = () => {
   const container = useRef(null);
 
-  // useAbout({ container });
+  useAbout({ container });
 
   return (
     <Layout>

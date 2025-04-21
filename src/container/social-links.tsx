@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef } from "react";
 import { social_links } from "./constants";
 import Link from "next/link";

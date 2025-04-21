@@ -10,7 +10,7 @@ import useExprience from "./hooks/useExprience";
 const Experience = () => {
   const container = useRef(null);
 
-  // useExprience({ container });
+  useExprience({ container });
 
   return (
     <div ref={container} className="bg-black py-20">
