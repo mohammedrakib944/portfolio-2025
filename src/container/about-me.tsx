@@ -25,22 +25,22 @@ const AboutMe = () => {
             <span className="font-medium">About</span> Me
           </Title>
           <p className="mt-10">
-            I began my journey as a web developer in 2015, and since then, I've
+            {`I began my journey as a web developer in 2015, and since then, I've
             continued to grow and evolve as a developer, taking on new
             challenges and learning the latest technologies along the way. Now,
             in my early thirties, 7 years after starting my web development
             journey, I'm building cutting-edge web applications using modern
             technologies such as Next.js, TypeScript, Nestjs, Tailwindcss,
-            Supabase and much more.
+            Supabase and much more.`}
           </p>
           <p>
-            I began my journey as a web developer in 2015, and since then, I've
+            {`I began my journey as a web developer in 2015, and since then, I've
             continued to grow and evolve as a developer, taking on new
             challenges and learning the latest technologies along the way. Now,
             in my early thirties, 7 years after starting my web development
             journey, I'm building cutting-edge web applications using modern
             technologies such as Next.js, TypeScript, Nestjs, Tailwindcss,
-            Supabase and much more.
+            Supabase and much more.`}
           </p>
         </div>
       </div>

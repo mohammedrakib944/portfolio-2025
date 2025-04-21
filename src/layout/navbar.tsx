@@ -1,11 +1,11 @@
 "use client";
-import React, { useRef } from "react";
-import Layout from "./layout";
 import Logo from "@/assets/log-black.svg";
-import Image from "next/image";
-import { navUrls } from "./nav";
 import Button from "@/components/button";
+import Image from "next/image";
+import { useRef } from "react";
 import { FaDownload } from "react-icons/fa6";
+import Layout from "./layout";
+import { navUrls } from "./nav";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -13,7 +13,7 @@ import { NAV_ANIMATION } from "./nav.animate";
 
 const Navbar = () => {
   const nav_container = useRef(null);
-  const { LOGO, LINK, RESUME_BUTTON } = NAV_ANIMATION;
+  const { RESUME_BUTTON } = NAV_ANIMATION;
 
   useGSAP(
     () => {

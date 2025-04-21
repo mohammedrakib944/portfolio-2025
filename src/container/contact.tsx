@@ -40,13 +40,13 @@ const Contact = () => {
           </div>
         </form>
         <div>
-          <Title>Let's talk for</Title>
-          <Title>Something special</Title>
+          <Title>{`Let's talk for`}</Title>
+          <Title>{`Something special`}</Title>
 
           <p className="py-4 text-neutral-600">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            {`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
             iste quos, sequi dolores, illo vel rerum similique quo nisi ea atque
-            neque vitae, ipsa dicta. Dolorum cupiditate itaque illo recusandae.
+            neque vitae, ipsa dicta. Dolorum cupiditate itaque illo recusandae.`}
           </p>
 
           <Title size="sm">rakib@gmail.com</Title>

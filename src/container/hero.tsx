@@ -45,7 +45,7 @@ const Hero = () => {
       >
         <div className="w-1/2 space-y-4">
           <Title className="flex gap-3">
-            <span className="font-medium">Hello I'm </span>{" "}
+            <span className="font-medium">{`Hello I'm`} </span>{" "}
             <div className="flex">
               <p className="rakib">R</p>
               <p className="rakib">a</p>
