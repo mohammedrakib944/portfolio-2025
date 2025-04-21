@@ -1,6 +1,8 @@
 import Freelance from "@/assets/company/freelance.png";
 import ShunnoIt from "@/assets/company/oit.jpg";
 import Vivasoft from "@/assets/company/vivasoft.png";
+import Portfolio from "@/assets/portfolio.jpg";
+import { ProjectCardProps } from "@/components/project-card";
 import {
   FaCss3,
   FaDocker,
@@ -133,5 +135,50 @@ export const experience = [
     duration: "Jan 2021 - Nov 2021",
     description:
       "Designed and developed the front-end for various services, notably the NetFee ISP Billing Management System.Optimized application performance by reducing API calls, implementing debouncing and lazy loading,and managing the global state.",
+  },
+];
+
+export const projects: ProjectCardProps[] = [
+  {
+    title: "First Project",
+    image_url: Portfolio,
+    description:
+      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
+    url: "#",
+  },
+  {
+    title: "Second Project",
+    image_url: Portfolio,
+    description:
+      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
+    url: "#",
+  },
+  {
+    title: "Third Project",
+    image_url: Portfolio,
+    description:
+      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
+    url: "#",
+  },
+  {
+    title: "Fourth Project",
+    image_url: Portfolio,
+    description:
+      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
+    url: "#",
+  },
+  {
+    title: "Fourth Project",
+    image_url: Portfolio,
+    description:
+      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
+    url: "#",
+  },
+  {
+    title: "Fourth Project",
+    image_url: Portfolio,
+    description:
+      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
+    url: "#",
   },
 ];

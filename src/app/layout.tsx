@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${signika.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${signika.className} antialiased overflow-x-hidden`}
       >
         <Navbar />
         {children}

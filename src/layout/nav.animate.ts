@@ -12,6 +12,7 @@ export const NAV_ANIMATION = {
   RESUME_BUTTON: {
     y: -150,
     duration: 1.5,
+    delay: 1.5,
     opacity: 0,
     ease: "bounce.out",
   },

@@ -12,20 +12,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const skills_container = useRef(null);
-  useGSAP(
-    () => {
-      gsap.from(".tech-item", {
-        y: 50,
-        opacity: 0,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: skills_container.current,
-          start: "top 80%",
-        },
-      });
-    },
-    { scope: skills_container, dependencies: [skills_container] }
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.from(".tech-item", {
+  //       y: 50,
+  //       opacity: 0,
+  //       stagger: 0.1,
+  //       scrollTrigger: {
+  //         trigger: skills_container.current,
+  //         start: "top 80%",
+  //       },
+  //     });
+  //   },
+  //   { scope: skills_container, dependencies: [skills_container] }
+  // );
   return (
     <Layout>
       <Title size="md" className="text-center mt-20">

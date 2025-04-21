@@ -11,27 +11,31 @@ import gsap from "gsap";
 
 const Hero = () => {
   const hero_container = useRef(null);
-  // useGSAP(
-  //   () => {
-  //     const tl = gsap.timeline();
-  //     tl.from(".rakib", {
-  //       x: 100,
-  //       opacity: 0,
-  //       stagger: 0.1,
-  //     });
-  //     tl.from(".title", {
-  //       y: 20,
-  //       opacity: 0,
-  //       duration: 0.3,
-  //       stagger: 0.3,
-  //     });
-  //     tl.from(".hero", {
-  //       x: 100,
-  //       opacity: 0,
-  //     });
-  //   },
-  //   { scope: hero_container, dependencies: [] }
-  // );
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+      tl.from(".rakib", {
+        x: 100,
+        opacity: 0,
+        stagger: 0.1,
+      });
+      tl.to(".engineer-bg", {
+        width: 240,
+        color: "white",
+      });
+      // tl.from(".title", {
+      //   y: 20,
+      //   opacity: 0,
+      //   duration: 0.3,
+      //   stagger: 0.3,
+      // });
+      // tl.from(".hero", {
+      //   x: 100,
+      //   opacity: 0,
+      // });
+    },
+    { scope: hero_container, dependencies: [] }
+  );
 
   return (
     <Layout>
@@ -52,9 +56,12 @@ const Hero = () => {
           </Title>
           <Title className="text-6xl flex items-center gap-3">
             <p className="title">Software</p>{" "}
-            <p className="title text-outline bg-[#305de6] py-2 text-white">
-              Enginner
-            </p>
+            <div className="flex items-center relative">
+              <p className="absolute title py-2 text-black engineer engineer-bg">
+                Enginner
+              </p>
+              <p className="w-0 h-[80px] bg-[#305de6] engineer-bg"></p>
+            </div>
           </Title>
           <p className="title mb-24 text-neutral-600">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe

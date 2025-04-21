@@ -15,15 +15,15 @@ const Navbar = () => {
   const nav_container = useRef(null);
   const { LOGO, LINK, RESUME_BUTTON } = NAV_ANIMATION;
 
-  // useGSAP(
-  //   () => {
-  //     const tl = gsap.timeline();
-  //     tl.from(".gsap_logo", LOGO);
-  //     tl.from(".gsap_link", LINK);
-  //     tl.from(".gsap_resume_button", RESUME_BUTTON);
-  //   },
-  //   { scope: nav_container, dependencies: [] }
-  // );
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+      // tl.from(".gsap_logo", LOGO);
+      // tl.from(".gsap_link", LINK);
+      tl.from(".gsap_resume_button", RESUME_BUTTON);
+    },
+    { scope: nav_container, dependencies: [] }
+  );
 
   return (
     <nav className="py-3">

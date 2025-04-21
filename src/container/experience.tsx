@@ -1,13 +1,19 @@
+"use client";
 import Title from "@/components/title";
 import Layout from "@/layout/layout";
-import React from "react";
+import React, { useRef } from "react";
 import { experience } from "./constants";
 import Image from "next/image";
 import { cn } from "@/utils/cn";
+import useExprience from "./hooks/useExprience";
 
 const Experience = () => {
+  const container = useRef(null);
+
+  // useExprience({ container });
+
   return (
-    <div className="bg-black py-20">
+    <div ref={container} className="bg-black py-20">
       <Layout>
         <Title size="md" className="text-center mb-16 text-white">
           <span className="font-medium">My</span> Experience
@@ -21,7 +27,7 @@ const Experience = () => {
             <div
               key={item.name}
               className={cn(
-                "border border-white/40 p-10 rounded-lg duration-200",
+                "experience border border-white/40 p-10 rounded-lg",
                 item.name === "Vivasoft" && "hover:bg-violet-500/10",
                 item.name === "Freelance" && "hover:bg-sky-500/10",
                 item.name === "Shunno IT" && "hover:bg-red-500/10"

@@ -1,14 +1,24 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import AboutImg from "@/assets/about-me.svg";
 import Layout from "@/layout/layout";
 import Image from "next/image";
 import Title from "@/components/title";
+import useAbout from "./hooks/useAbout";
 
 const AboutMe = () => {
+  const container = useRef(null);
+
+  // useAbout({ container });
+
   return (
     <Layout>
-      <div className="grid grid-cols-2 gap-x-4 py-40">
-        <Image className="max-w-[450px]" src={AboutImg} alt="About Image" />
+      <div ref={container} className="grid grid-cols-2 gap-x-4 py-40">
+        <Image
+          className="max-w-[450px] bg-white rounded-[10px] about-image"
+          src={AboutImg}
+          alt="About Image"
+        />
 
         <div>
           <Title>
