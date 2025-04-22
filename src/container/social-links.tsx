@@ -9,17 +9,17 @@ import { useGSAP } from "@gsap/react";
 const SocialLinks = () => {
   const social_container = useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.from(".social", {
-        y: -50,
-        opacity: 0,
-        stagger: 0.3,
-        ease: "elastic.out(1,0.3)",
-      });
-    },
-    { scope: social_container }
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.from(".social", {
+  //       y: -50,
+  //       opacity: 0,
+  //       stagger: 0.3,
+  //       ease: "elastic.out(1,0.3)",
+  //     });
+  //   },
+  //   { scope: social_container }
+  // );
 
   return (
     <ul ref={social_container} className="flex gap-x-2">
