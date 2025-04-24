@@ -3,8 +3,8 @@ import React, { useRef } from "react";
 import { social_links } from "./constants";
 import Link from "next/link";
 
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
 
 const SocialLinks = () => {
   const social_container = useRef(null);
