@@ -5,6 +5,14 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-snap-type: y proximity;
+}
+
+.snap-this-section {
+  scroll-snap-align: start;
+}
+
 .text-outline {
   color: transparent;
   -webkit-text-stroke: 2px white;
