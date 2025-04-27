@@ -8,15 +8,16 @@ import useProject from "./hooks/useProject";
 
 const Projects = () => {
   const container = useRef(null);
+
   useProject({ container });
 
   return (
     <Layout>
-      <div ref={container} className="pb-[550px]">
+      <div ref={container} className="pb-36">
         <Title size="md" className="text-center mb-16">
           <span className="font-medium">My</span> Projects
         </Title>
-        <div className="absolute left-0 flex gap-x-5 project-section">
+        <div className="left-0 flex flex-col items-center gap-y-14">
           {projects.map((project, index) => (
             <ProjectCard key={index} data={project} />
           ))}

@@ -11,7 +11,7 @@ export type ProjectCardProps = {
 const ProjectCard = ({ data }: { data: ProjectCardProps }) => {
   const { image_url, title, description } = data;
   return (
-    <div className="w-[480px] space-y-3 border border-black/30 rounded-lg">
+    <div className="project-card w-[80%] bg-white space-y-3 border border-black/30 rounded-lg">
       <Image
         src={image_url}
         className="w-full rounded-lg"

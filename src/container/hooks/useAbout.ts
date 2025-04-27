@@ -5,7 +5,8 @@ const useAbout = ({ container }: { container: RefObject<null> }) => {
   useGSAP(
     () => {
       gsap.from(".about-image", {
-        transform: "scale(2) translateX(31%) translateY(10%)",
+        y: 50,
+        opacity: 0,
         scrollTrigger: {
           trigger: container.current,
           start: "top 60%",
