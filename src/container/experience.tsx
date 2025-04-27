@@ -33,7 +33,7 @@ const Experience = () => {
                 item.name === "Shunno IT" && "hover:bg-red-500/10"
               )}
             >
-              <div className="flex start justify-between">
+              <div className="flex flex-col md:flex-row gap-3 start justify-between">
                 <div className="flex items-center gap-3">
                   <Image
                     className={cn(

@@ -7,17 +7,16 @@ import { skills } from "./constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useView from "@/hooks/useView";
+import { mobile_width } from "@/config/responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const skills_container = useRef(null);
-  const { is_desktop } = useView();
 
   useGSAP(
     () => {
-      if (!is_desktop) return;
+      if (window.innerWidth < mobile_width) return;
 
       gsap.from(".tech-item", {
         y: 50,
@@ -40,7 +39,7 @@ const Skills = () => {
 
       <div
         ref={skills_container}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5 mt-16 lg:mt-24 mb-40"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5 mt-16 lg:mt-24 mb-20 md:mb-40"
       >
         {skills.map((item) => (
           <div key={item.id} className="tech-item">

@@ -10,13 +10,12 @@ import { RiMenu3Line } from "react-icons/ri";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import useView from "@/hooks/useView";
 import Menu from "./menu";
+import { mobile_width } from "@/config/responsive";
 
 const Navbar = () => {
   const nav_container = useRef(null);
   const [is_menu_open, set_menu_open] = useState(false);
-  const { is_desktop } = useView();
 
   const toggle_menu = () => {
     set_menu_open((prev) => !prev);
@@ -24,6 +23,8 @@ const Navbar = () => {
 
   useGSAP(
     () => {
+      if (window.innerWidth < mobile_width) return;
+
       const tl = gsap.timeline();
       tl.from(".gsap_resume_button", {
         y: -150,
@@ -65,7 +66,7 @@ const Navbar = () => {
             <RiMenu3Line />
           </button>
 
-          {!is_desktop && is_menu_open && <Menu set_menu_open={toggle_menu} />}
+          {is_menu_open && <Menu set_menu_open={toggle_menu} />}
         </div>
       </Layout>
     </nav>

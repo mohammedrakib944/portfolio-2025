@@ -5,24 +5,25 @@ import Layout from "@/layout/layout";
 import Image from "next/image";
 import Title from "@/components/title";
 import useAbout from "./hooks/useAbout";
-import useView from "@/hooks/useView";
 
 const AboutMe = () => {
   const container = useRef(null);
-  const { is_desktop } = useView();
 
   useAbout({ container });
 
   return (
     <Layout>
-      <div ref={container} className="grid grid-cols-2 gap-x-4 py-40">
-        {is_desktop && (
+      <div
+        ref={container}
+        className="md:grid grid-cols-2 gap-x-4 py-20 md:py-40"
+      >
+        {
           <Image
-            className="max-w-[450px] bg-white rounded-[10px] about-image"
+            className="hidden md:block max-w-[450px] bg-white rounded-[10px] about-image"
             src={AboutImg}
             alt="About Image"
           />
-        )}
+        }
 
         <div>
           <Title>

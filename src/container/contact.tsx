@@ -11,10 +11,10 @@ const Contact = () => {
   useContact({ container });
   return (
     <Layout>
-      <Title size="md" className="mt-36 text-center">
+      <Title size="md" className="mt-16 text-center">
         <span className="font-medium">Contact</span> Me
       </Title>
-      <div ref={container} className="pb-40 pt-16 grid grid-cols-2 gap-x-10">
+      <div ref={container} className="pb-20 pt-16 grid md:grid-cols-2 gap-10">
         <form className="space-y-3">
           <input
             placeholder="Your first name"

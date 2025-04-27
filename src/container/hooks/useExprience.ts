@@ -1,13 +1,10 @@
 import { RefObject } from "react";
 import { useGSAP, gsap } from "./animation";
-import useView from "@/hooks/useView";
-
+import { mobile_width } from "@/config/responsive";
 const useExprience = ({ container }: { container: RefObject<null> }) => {
-  const { is_desktop } = useView();
-
   useGSAP(
     () => {
-      if (!is_desktop) return;
+      if (window.innerWidth < mobile_width) return;
 
       gsap.from(".experience", {
         y: 100,

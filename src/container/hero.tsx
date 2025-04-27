@@ -8,15 +8,15 @@ import { useRef } from "react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import useView from "@/hooks/useView";
+import { mobile_width } from "@/config/responsive";
 
 const Hero = () => {
   const hero_container = useRef(null);
-  const { is_desktop } = useView();
 
   useGSAP(
     () => {
-      if (!is_desktop) return;
+      if (window.innerWidth < mobile_width) return;
+
       const tl = gsap.timeline();
       tl.from(".rakib", {
         x: 100,
@@ -51,12 +51,10 @@ const Hero = () => {
           <Title className="text-4xl lg:text-6xl flex items-center gap-3">
             <p className="title">Software</p>{" "}
             <div className="flex items-center relative">
-              <p className="absolute title py-2 text-white lg:text-black bg-[#305de6] lg:bg-transparent engineer engineer-bg">
+              <p className="absolute title py-2 text-white bg-[#305de6] lg:bg-transparent engineer">
                 Enginner
               </p>
-              {is_desktop && (
-                <p className="w-0 h-[80px] bg-[#305de6] engineer-bg"></p>
-              )}
+              <p className="w-0 h-[80px] bg-[#305de6] engineer-bg"></p>
             </div>
           </Title>
           <p className="title mb-20 lg:mb-24 text-neutral-600">

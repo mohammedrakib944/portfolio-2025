@@ -4,10 +4,6 @@ import { useGSAP, gsap } from "./animation";
 const useProject = ({ container }: { container: RefObject<null> }) => {
   useGSAP(
     () => {
-      const is_desktop = window.innerWidth >= 768;
-
-      if (!is_desktop) return;
-
       const cards = gsap.utils.toArray(".project-card");
 
       cards.forEach((card: any) => {
