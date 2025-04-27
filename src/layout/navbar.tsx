@@ -2,16 +2,16 @@
 import Logo from "@/assets/log-black.svg";
 import Button from "@/components/button";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaDownload } from "react-icons/fa6";
+import { RiMenu3Line } from "react-icons/ri";
 import Layout from "./layout";
 import { navUrls } from "./nav";
-import { RiMenu3Line } from "react-icons/ri";
 
+import { mobile_width } from "@/config/responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Menu from "./menu";
-import { mobile_width } from "@/config/responsive";
 
 const Navbar = () => {
   const nav_container = useRef(null);

@@ -4,9 +4,9 @@ import { useGSAP, gsap } from "./animation";
 const useProject = ({ container }: { container: RefObject<null> }) => {
   useGSAP(
     () => {
-      const cards = gsap.utils.toArray(".project-card");
+      const cards = gsap.utils.toArray<HTMLElement>(".project-card");
 
-      cards.forEach((card: any) => {
+      cards.forEach((card) => {
         gsap.to(card, {
           scale: 0.3,
           opacity: 0,
