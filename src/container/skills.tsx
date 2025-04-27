@@ -40,7 +40,7 @@ const Skills = () => {
 
       <div
         ref={skills_container}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-16 lg:mt-24 mb-40"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5 mt-16 lg:mt-24 mb-40"
       >
         {skills.map((item) => (
           <div key={item.id} className="tech-item">

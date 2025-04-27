@@ -13,11 +13,11 @@ const Projects = () => {
 
   return (
     <Layout>
-      <div ref={container} className="pb-36">
+      <div ref={container} className="pb-12">
         <Title size="md" className="text-center mb-16">
           <span className="font-medium">My</span> Projects
         </Title>
-        <div className="left-0 flex flex-col items-center gap-y-14">
+        <div className="left-0 flex flex-col items-center gap-y-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} data={project} />
           ))}

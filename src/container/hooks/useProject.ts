@@ -21,13 +21,12 @@ const useProject = ({ container }: { container: RefObject<null> }) => {
             start: "top 0%",
             end: "bottom 0%",
             scrub: 1,
-            snap: {
-              snapTo: 1.09,
-              duration: 0.3,
-              ease: "power1.in",
-              delay: 0, // snap immediately after scrolling stops
-            },
-            pin: true,
+            // snap: {
+            //   snapTo: 1.09,
+            //   duration: 0.3,
+            //   ease: "power1.in",
+            //   delay: 0,
+            // },
           },
         });
       });

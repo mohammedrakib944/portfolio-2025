@@ -46,30 +46,24 @@ const Navbar = () => {
             alt="Logo Image"
           />
 
-          {is_desktop && (
-            <ul className="gsap_navlinks flex gap-x-6">
-              {navUrls.map((url) => (
-                <li
-                  key={url.id}
-                  className="gsap_link font-semibold hover:underline cursor-pointer"
-                >
-                  {url.title}
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className="hidden md:flex gap-x-6 gsap_navlinks">
+            {navUrls.map((url) => (
+              <li
+                key={url.id}
+                className="gsap_link font-semibold hover:underline cursor-pointer"
+              >
+                {url.title}
+              </li>
+            ))}
+          </ul>
 
           <div className="gsap_resume_button">
             <Button rightIcon={<FaDownload />}>Resume</Button>
           </div>
 
-          {!is_desktop && (
-            <>
-              <button className="text-2xl" onClick={toggle_menu}>
-                <RiMenu3Line />
-              </button>
-            </>
-          )}
+          <button className="block md:hidden text-2xl" onClick={toggle_menu}>
+            <RiMenu3Line />
+          </button>
 
           {!is_desktop && is_menu_open && <Menu set_menu_open={toggle_menu} />}
         </div>
