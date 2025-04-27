@@ -7,13 +7,18 @@ import { skills } from "./constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useView from "@/hooks/useView";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const skills_container = useRef(null);
+  const { is_desktop } = useView();
+
   useGSAP(
     () => {
+      if (!is_desktop) return;
+
       gsap.from(".tech-item", {
         y: 50,
         opacity: 0,
@@ -26,15 +31,16 @@ const Skills = () => {
     },
     { scope: skills_container, dependencies: [skills_container] }
   );
+
   return (
     <Layout>
-      <Title size="md" className="text-center mt-20">
+      <Title size="md" className="text-center mt-24 lg:mt-20">
         <span className="font-medium">My</span> Skills
       </Title>
 
       <div
         ref={skills_container}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-24 mb-40"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-16 lg:mt-24 mb-40"
       >
         {skills.map((item) => (
           <div key={item.id} className="tech-item">

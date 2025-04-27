@@ -12,7 +12,11 @@ const Title = ({ className, size, children }: TitleProps) => {
     <h3
       className={cn(
         "font-signika font-bold",
-        size === "md" ? "text-3xl" : size === "sm" ? "text-xl" : "text-5xl",
+        size === "md"
+          ? "text-2xl lg:text-3xl"
+          : size === "sm"
+          ? "text-xl"
+          : "text-2xl lg:text-5xl",
         className
       )}
     >
