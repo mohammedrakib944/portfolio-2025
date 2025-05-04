@@ -44,12 +44,11 @@ const Contact = () => {
           <Title>{`Something special`}</Title>
 
           <p className="py-4 text-neutral-600">
-            {`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            iste quos, sequi dolores, illo vel rerum similique quo nisi ea atque
-            neque vitae, ipsa dicta. Dolorum cupiditate itaque illo recusandae.`}
+            {`Have a project in mind or just want to say hello?
+I'm always open to new opportunities and collaborations.`}
           </p>
 
-          <Title size="sm">rakib@gmail.com</Title>
+          <Title size="sm">rakibuzzaman.contact@gmail.com</Title>
         </div>
       </div>
     </Layout>

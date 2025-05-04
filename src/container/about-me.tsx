@@ -15,7 +15,7 @@ const AboutMe = () => {
     <Layout>
       <div
         ref={container}
-        className="md:grid grid-cols-2 gap-x-4 py-20 md:py-40"
+        className="md:grid grid-cols-2 gap-x-4 py-20 md:py-32"
       >
         {
           <Image
@@ -25,28 +25,20 @@ const AboutMe = () => {
           />
         }
 
-        <div>
+        <div className="px-2 lg:px-0">
           <Title>
             <span className="font-medium">About</span> Me
           </Title>
-          <p className="mt-10">
-            {`I began my journey as a web developer in 2015, and since then, I've
-            continued to grow and evolve as a developer, taking on new
-            challenges and learning the latest technologies along the way. Now,
-            in my early thirties, 7 years after starting my web development
-            journey, I'm building cutting-edge web applications using modern
-            technologies such as Next.js, TypeScript, Nestjs, Tailwindcss,
-            Supabase and much more.`}
+          <p className="mt-6 mb-2">
+            {`I'm Md Rakibuzzaman, a dedicated Software Engineer with a strong focus on front-end development. With over three years of hands-on experience in both professional and freelance environments, I’ve built 60+ web applications that range from sleek portfolio sites to complex real-time systems.`}
           </p>
-          <p>
-            {`I began my journey as a web developer in 2015, and since then, I've
-            continued to grow and evolve as a developer, taking on new
-            challenges and learning the latest technologies along the way. Now,
-            in my early thirties, 7 years after starting my web development
-            journey, I'm building cutting-edge web applications using modern
-            technologies such as Next.js, TypeScript, Nestjs, Tailwindcss,
-            Supabase and much more.`}
+          <p className="mb-2">
+            {`Currently, I work at Vivasoft Limited, where I contribute to large-scale production apps like Career-Crawler and Wellteam, enhancing performance, SEO, and user experience.`}
           </p>
+          <p className="mb-2">
+            {`My work is driven by clean code, performance, and maintainability. I love solving problems, optimizing systems, and pushing the boundaries with modern web technologies – whether that’s with GSAP animations, blockchain integration, or building a WebRTC video chat from scratch.`}
+          </p>
+          <p>{`I’m always learning, always building, and always aiming to deliver impactful solutions.`}</p>
         </div>
       </div>
     </Layout>

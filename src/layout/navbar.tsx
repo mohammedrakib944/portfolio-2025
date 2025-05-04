@@ -2,29 +2,24 @@
 import Logo from "@/assets/log-black.svg";
 import Button from "@/components/button";
 import Image from "next/image";
-import { useRef, useState } from "react";
-import { FaDownload } from "react-icons/fa6";
-import { RiMenu3Line } from "react-icons/ri";
+import { useRef } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import Layout from "./layout";
-import { navUrls } from "./nav";
 
-import { mobile_width } from "@/config/responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Menu from "./menu";
+import Link from "next/link";
 
 const Navbar = () => {
   const nav_container = useRef(null);
-  const [is_menu_open, set_menu_open] = useState(false);
+  // const [is_menu_open, set_menu_open] = useState(false);
 
-  const toggle_menu = () => {
-    set_menu_open((prev) => !prev);
-  };
+  // const toggle_menu = () => {
+  //   set_menu_open((prev) => !prev);
+  // };
 
   useGSAP(
     () => {
-      if (window.innerWidth < mobile_width) return;
-
       const tl = gsap.timeline();
       tl.from(".gsap_resume_button", {
         y: -150,
@@ -47,7 +42,7 @@ const Navbar = () => {
             alt="Logo Image"
           />
 
-          <ul className="hidden md:flex gap-x-6 gsap_navlinks">
+          {/* <ul className="hidden md:flex gap-x-6 gsap_navlinks">
             {navUrls.map((url) => (
               <li
                 key={url.id}
@@ -56,17 +51,22 @@ const Navbar = () => {
                 {url.title}
               </li>
             ))}
-          </ul>
+          </ul> */}
 
           <div className="gsap_resume_button">
-            <Button rightIcon={<FaDownload />}>Resume</Button>
+            <Link
+              href="https://docs.google.com/document/d/1uutw6v4fr4H4Vc4UlmPLGiHjCme8j_ucRObgRJbbE3o/edit?usp=sharing"
+              target="_blank"
+            >
+              <Button rightIcon={<FaExternalLinkAlt />}>View Resume</Button>
+            </Link>
           </div>
 
-          <button className="block md:hidden text-2xl" onClick={toggle_menu}>
+          {/* <button className="block md:hidden text-2xl" onClick={toggle_menu}>
             <RiMenu3Line />
           </button>
 
-          {is_menu_open && <Menu set_menu_open={toggle_menu} />}
+          {is_menu_open && <Menu set_menu_open={toggle_menu} />} */}
         </div>
       </Layout>
     </nav>

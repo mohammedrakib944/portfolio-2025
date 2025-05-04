@@ -51,17 +51,16 @@ const Hero = () => {
           <Title className="text-4xl lg:text-6xl flex items-center gap-3">
             <p className="title">Software</p>{" "}
             <div className="flex items-center relative">
-              <p className="absolute title py-2 text-white bg-[#305de6] lg:bg-transparent engineer">
+              <p className="absolute title py-2 text-white bg-[#305de6] lg:bg-transparent engineer text-shadow-md text-shadow-black">
                 Enginner
               </p>
               <p className="w-0 h-[80px] bg-[#305de6] engineer-bg"></p>
             </div>
           </Title>
           <p className="title mb-20 lg:mb-24 text-neutral-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            temporibus sequi dolores fugiat blanditiis ab amet non optio atque.
-            Et ullam nemo porro obcaecati eos, saepe cupiditate possimus hic
-            error.
+            A passionate Front-End developer specialized in building
+            high-performance, user-centric web applications with React.js,
+            Next.js, and TypeScript.
           </p>
 
           <SocialLinks />

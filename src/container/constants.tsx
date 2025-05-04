@@ -1,8 +1,6 @@
 import Freelance from "@/assets/company/freelance.png";
 import ShunnoIt from "@/assets/company/oit.jpg";
 import Vivasoft from "@/assets/company/vivasoft.png";
-import Portfolio from "@/assets/portfolio.jpg";
-import { ProjectCardProps } from "@/components/project-card";
 import {
   FaCss3,
   FaDocker,
@@ -13,7 +11,8 @@ import {
   FaLinkedin,
   FaNodeJs,
   FaReact,
-  FaYoutube,
+  FaGithub,
+  // FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -27,29 +26,35 @@ export type SocialLinks = {
 
 export const social_links: SocialLinks[] = [
   {
+    id: 0,
+    icon: <FaGithub />,
+    title: "Github",
+    url: "https://github.com/mohammedrakib944",
+  },
+  {
     id: 1,
-    icon: <FaFacebook />,
-    title: "Facebook",
-    url: "#",
+    icon: <FaLinkedin />,
+    title: "Linkedin",
+    url: "www.linkedin.com/in/rakibuzzaman-js-dev",
   },
   {
     id: 2,
-    icon: <FaLinkedin />,
-    title: "Linkedin",
-    url: "#",
+    icon: <FaFacebook />,
+    title: "Facebook",
+    url: "https://www.facebook.com/md.rakib.38",
   },
   {
     id: 3,
     icon: <FaXTwitter />,
     title: "XTwitter",
-    url: "#",
+    url: "https://x.com/rakib_jrdev",
   },
-  {
-    id: 4,
-    icon: <FaYoutube />,
-    title: "Youtube",
-    url: "#",
-  },
+  // {
+  //   id: 4,
+  //   icon: <FaYoutube />,
+  //   title: "Youtube",
+  //   url: "#",
+  // },
 ];
 
 type Skills = {
@@ -138,47 +143,53 @@ export const experience = [
   },
 ];
 
-export const projects: ProjectCardProps[] = [
+export const projects = [
   {
-    title: "First Project",
-    image_url: Portfolio,
+    title: "Career Crawler",
     description:
-      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
-    url: "#",
+      "Job market analyzer built with Next.js 14 and TypeScript, featuring dynamic state management and backend integration.",
+    technologies: ["Next.js", "TypeScript", "RTK Query", "Shadcn UI"],
+    link: null,
   },
   {
-    title: "Second Project",
-    image_url: Portfolio,
+    title: "Wellteam",
     description:
-      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
-    url: "#",
+      "Fitness tracking app where I optimized performance (48% → 97%) and SEO (62% → 100%).",
+    technologies: ["Next.js", "TypeScript", "React Query"],
+    link: null,
   },
   {
-    title: "Third Project",
-    image_url: Portfolio,
+    title: "Blog Platform",
     description:
-      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
-    url: "#",
+      "Full-stack blog system with OAuth, SEO, article publishing, commenting, and a powerful admin panel.",
+    technologies: ["Next.js", "TypeScript", "Express.js", "MySQL", "Redux RTK"],
+    link: "https://rakib-blog.vercel.app/",
   },
   {
-    title: "Fourth Project",
-    image_url: Portfolio,
+    title: "Ecommerce Website",
     description:
-      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
-    url: "#",
+      "Full-featured e-commerce platform with payment integration, product management, and secure login.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Express.js",
+      "Redux RTK",
+    ],
+    link: null,
   },
   {
-    title: "Fourth Project",
-    image_url: Portfolio,
+    title: "WebRTC Video Call App",
     description:
-      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
-    url: "#",
+      "Real-time video calling app with room joining, screen sharing, and call control – all built without third-party libraries.",
+    technologies: ["WebRTC", "Socket.io", "JavaScript"],
+    link: null,
   },
   {
-    title: "Fourth Project",
-    image_url: Portfolio,
+    title: "Blockchain Data Table",
     description:
-      "I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.",
-    url: "#",
+      "Interactive front-end with 100% performance and blockchain wallet integration using Web3.js.",
+    technologies: ["React.js", "GSAP", "Web3.js", "Ether.js"],
+    link: "https://github.com/mohammedrakib944",
   },
 ];

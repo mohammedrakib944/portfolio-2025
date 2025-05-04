@@ -25,7 +25,7 @@ const SocialLinks = () => {
     <ul ref={social_container} className="flex gap-x-2">
       {social_links.map((item) => (
         <li key={item.id} className="social">
-          <Link href={item.url}>
+          <Link href={item.url} target="_blank">
             <p className="p-3 border-2 text-lg rounded-sm hover:bg-black hover:text-white duration-200">
               {item.icon}
             </p>

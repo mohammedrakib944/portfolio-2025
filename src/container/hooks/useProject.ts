@@ -4,27 +4,14 @@ import { useGSAP, gsap } from "./animation";
 const useProject = ({ container }: { container: RefObject<null> }) => {
   useGSAP(
     () => {
-      const cards = gsap.utils.toArray<HTMLElement>(".project-card");
-
-      cards.forEach((card) => {
-        gsap.to(card, {
-          scale: 0.3,
-          opacity: 0,
-          duration: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 0%",
-            end: "bottom 0%",
-            scrub: 1,
-            // snap: {
-            //   snapTo: 1.09,
-            //   duration: 0.3,
-            //   ease: "power1.in",
-            //   delay: 0,
-            // },
-          },
-        });
+      gsap.from(".project-card", {
+        y: 100,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 50%",
+        },
       });
     },
     { scope: container, dependencies: [] }
